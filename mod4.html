@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Page Title</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <style>
+        :root{
+            --titre-description-background_titre-color: black;
+            --titre-description-background_paragraph-color: black;
+            --titre-description-background_titre-size: 48px;
+            --titre-description-background_paragraph-size: 18px;
+            --titre-description-background_paragraph-font:"SamsungOne";
+            --titre-description-background_titre-font:"SamsungOneb";
+        }
+        @font-face {
+            font-family: "SamsungOneb";
+            src: url("./font/SamsungSharpSans-Bold.ttf");
+        }
+        @font-face {
+            font-family: "SamsungOne";
+            src: url("./font/SamsungOne-400.ttf");
+        }
+        .background-description p{
+            width: 584px;
+            font-family: var(--titre-description-background_paragraph-font);
+            color: var(--titre-description-background_paragraph-color);
+            font-size: var(--titre-description-background_paragraph-size);
+        }
+        .background-description h1{
+            width: 584px;
+            color: var(--titre-description-background_titre-color);
+            font-family: var(--titre-description-background_titre-font);
+            font-size: var(--titre-description-background_titre-size);
+        }
+        .background-description{
+            width: 1440px;
+            background-image: url(./imageici.png);
+            height: 820px;
+            background-size: cover;
+        }
+        .titre-description-background{
+            margin: auto;
+            width: 1440px;
+        }
+    </style>
+</head>
+<body>
+    <div class="titre-description-background">
+        <div class="background-description">
+            <h1>Titre</h1>
+            <p>
+                Lorem ipsum dolor, sit amet consectetur adipisicing elit. Rem iure minima laudantium officiis modi quia iste omnis dicta sed commodi officia, corrupti dolorum porro, eos odio, voluptates mollitia natus nulla.
+                Animi quod quidem optio distinctio sunt dolorem assumenda fugiat ratione est libero cumque, obcaecati iusto non, omnis illo vel soluta nam placeat itaque aspernatur ea sed beatae facilis nesciunt. Libero.
+                Itaque nihil, iste libero dolorum, aut mollitia aperiam, recusandae atque neque nobis alias reprehenderit vero dignissimos assumenda quidem ducimus autem id ipsa tenetur necessitatibus. Placeat dolores ea sequi excepturi itaque?
+            </p>
+        </div>
+    </div>
+</body>
+</html>

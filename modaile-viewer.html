@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Page Title</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <style>
+        @font-face {
+            font-family: "SamsungOneb";
+            src: url("./font/SamsungSharpSans-Bold.ttf");
+        }
+        @font-face {
+            font-family: "SamsungOne";
+            src: url("./font/SamsungOne-400.ttf");
+        }
+        iframe{
+            width: 95vw;
+            height: 90vh;
+        }
+        #contg{
+            display: flex;
+            margin: auto;
+            width: 988px;
+            justify-content: center;
+            align-items: center;
+        }
+        #arr{
+            width: 70px;
+            display: flex;
+            gap: 10px;
+            justify-content: space-between;
+        }
+        #arr span{
+            cursor: pointer;
+            padding: 12px 15px;
+            border-radius: 100%;
+            border: #ddd 2px solid;
+        }
+        #arr span:hover{
+            opacity: 0.6;
+        }
+        .swiper-slide{
+            font-family: "SamsungOne";
+            text-align: center;
+            cursor: pointer;
+        }
+        .str{
+            margin-left: 20px;
+            margin-bottom: 10px;
+        }
+    </style>
+    <link
+        rel="stylesheet"
+        href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
+    />
+    <script src="https://kit.fontawesome.com/60ae45a088.js" crossorigin="anonymous" defer></script>
+</head>
+<body>
+    <iframe src="mod1.html" frameborder="0"></iframe>
+    <div class="swiper">
+        <!-- Additional required wrapper -->
+        <div class="swiper-wrapper">
+            <!-- Slides -->
+            <div class="swiper-slide str" onclick="ifr(this.id)" id="1">
+                <span>modaile 1</span>
+            </div>
+            <div class="swiper-slide" onclick="ifr(this.id)" id="2">
+                <span>modaile 2</span>
+            </div>
+            <div class="swiper-slide" onclick="ifr(this.id)" id="3">
+                <span>modaile 3</span>
+            </div>
+            <div class="swiper-slide" onclick="ifr(this.id)" id="4">
+                <span>modaile 4</span>
+            </div>
+            <div class="swiper-slide" onclick="ifr(this.id)" id="5">
+                <span>modaile 5</span>
+            </div>
+            <div class="swiper-slide" onclick="ifr(this.id)" id="6">
+                <span>modaile 6</span>
+            </div>
+            <div class="swiper-slide" onclick="ifr(this.id)" id="7">
+                <span>modaile 7</span>
+            </div>
+            <div class="swiper-slide" onclick="ifr(this.id)" id="8">
+                <span>modaile 8</span>
+            </div>
+            <div class="swiper-slide" onclick="ifr(this.id)" id="9">
+                <span>modaile 9</span>
+            </div>
+            <div class="swiper-slide" onclick="ifr(this.id)" id="10">
+                <span>modaile 10</span>
+            </div>
+            <div class="swiper-slide" onclick="ifr(this.id)" id="11">
+                <span>modaile 11</span>
+            </div>
+            <div class="swiper-slide" onclick="ifr(this.id)" id="12">
+                <span>modaile 12</span>
+            </div>
+        </div>
+        <div id="contg">
+            <div id="arr">
+                <span id="prev"><i class="fas fa-arrow-left"></i></span>
+                <span id="next"><i class="fas fa-arrow-right"></i></span>
+            </div>
+        </div>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script>
+        const swiper=new Swiper(".swiper",{
+            slidesPerView:6,
+            spaceBetween: 60,
+            loop: false,
+            centeredSlides: true,
+            navigation: {
+                nextEl: '.swiper-button-next',
+                prevEl: '.swiper-button-prev',
+            },
+            on: {
+                slideChange: function () {
+                    if (swiper.activeIndex==0) {
+                        document.getElementById("prev").style.opacity="0.6"
+                        document.getElementById("prev").style.cursor="default"
+                    }
+                    else{
+                        document.getElementById("prev").style.opacity="1"
+                        document.getElementById("prev").style.cursor="pointer"
+                    }
+                    if (swiper.activeIndex==swiper.slides.length-1) {
+                        document.getElementById("next").style.opacity="0.6"
+                        document.getElementById("next").style.cursor="default"
+                    }
+                    else{
+                        document.getElementById("next").style.opacity="1"
+                        document.getElementById("next").style.cursor="pointer"
+                    }
+                    document.querySelector("iframe").src="mod"+String(swiper.activeIndex+1)+".html"
+                }
+            }
+        })
+        if (swiper.activeIndex==0) {
+            document.getElementById("prev").style.opacity="0.6"
+            document.getElementById("prev").style.cursor="default"
+        }
+        else{
+            document.getElementById("prev").style.opacity="1"
+        }
+        document.getElementById("prev").addEventListener("click",()=>{
+            if (swiper.activeIndex!=0) {
+                swiper.slidePrev()
+                document.querySelector("iframe").src="mod"+String(swiper.activeIndex+1)+".html"
+                console.log(swiper.activeIndex);
+                
+            }
+        })
+        document.getElementById("next").addEventListener("click",()=>{
+            
+            if (swiper.activeIndex!=swiper.slides.length-1) {
+                swiper.slideNext()
+                document.querySelector("iframe").src="mod"+String(swiper.activeIndex+1)+".html"
+
+            }
+        })
+        function ifr(x) {
+            document.querySelector("iframe").src="mod"+String(x)+".html"
+            swiper.slideTo(x-1)
+        }
+    </script>
+</body>
+</html>

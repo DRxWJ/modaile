@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Page Title</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css">
+    <script src="https://kit.fontawesome.com/60ae45a088.js" crossorigin="anonymous" defer></script>
+    <style>
+        @font-face {
+            font-family: "SamsungOneb";
+            src: url("./font/SamsungSharpSans-Bold.ttf");
+        }
+        @font-face {
+            font-family: "SamsungOne";
+            src: url("./font/SamsungOne-400.ttf");
+        }
+        html, body {
+            margin: 0;
+            padding: 0;
+            width: 100vw;
+        }
+
+        .headsec {
+            width: 100vw;
+            height: auto;
+            overflow: hidden;
+            position: relative;
+        }
+
+        .headsec picture, 
+        .headsec img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            display: block;
+        }
+        .headsec img{
+            position: relative;
+            width: 100%;
+        }
+        .headsec .dets {
+            position: absolute;
+            right: 5vw;
+            top: 5vh;
+            bottom: 50px;
+            z-index: 20;
+            color: black;
+            font-size: 32px;
+            font-family: 'SamsungOneb';
+        }
+        .headsec .dets div{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        .headsec {
+            width: 100vw;
+            overflow: hidden;
+            position: relative;
+        }
+        .headsec .dets h1{
+            font-size: 3.61111vw;
+        }
+        .headsec .dets picture img{
+                height: 3.54167vw;
+            width: 17.70833vw;
+            display: block;
+            margin: 0 auto;
+        }
+        .headsec .dets p{
+            font-size: 18px;
+            width: 431px;
+            text-align: center;
+            font-family: "SamsungOne";
+        }
+        .headsec .dets div .pre{
+            color: white;
+            font-family: "SamsungOne";
+            font-size: 18px;
+            padding: 12px 30px;
+            background-color: #007aff;
+            border-radius: 40px;
+            cursor: pointer;
+        }
+        @media (max-width:767px) {
+            .headsec {
+                width: 99vw;
+                height: 780px;
+                overflow: hidden;
+                position: relative;
+            }
+            .headsec .dets {
+                position: absolute;
+                transform: none;
+                top: 0;
+            }
+            .headsec .dets h1{
+                font-size: 8.88889vw;
+            }
+            .headsec .dets picture img{
+                width: 175px;
+                display: block;
+                margin: 0 auto;
+                height: auto;
+            }
+            .headsec .dets p{
+                font-size: 14px;
+                width: 345px;
+                text-align: center;
+                font-family: "SamsungOne";
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="headsec">
+        <picture>
+            <source media="(min-width:1024px)" srcset="./mod11/galaxy-z-fold7-features-kv.jpg">
+            <source media="(min-width:768px)" srcset="./mod11/galaxy-z-fold7-features-kv-tb.jpg">
+            <source media="(max-width:767px)" srcset="./mod11/galaxy-z-fold7-features-kv-mo.jpg">
+            <img src="./mod11/galaxy-z-fold7-features-kv.jpg" alt="Galaxy Z Fold 7">
+        </picture>
+        <div class="dets">
+            <div>
+                <h1>modaile</h1>
+                <picture>
+                    <source media="(min-width:1024px)" srcset="./mod11/galaxy-z-fold7-features-kv-ai-text.png">
+                    <source media="(min-width:768px)" srcset="./mod11/galaxy-z-fold7-features-kv-ai-text-tb.png">
+                    <source media="(max-width:767px)" srcset="./mod11/galaxy-z-fold7-features-kv-ai-text-mo.png">
+                    <img src="./mod11/galaxy-z-fold7-features-kv-ai-text.png" alt="Galaxy Z Fold 7">
+                </picture>
+                <p>
+                    Lorem ipsum, dolor sit amet consectetur adipisicing elit. 
+                    Eaque, magnam dolorum! 
+                </p>
+                <span class="pre">
+                    Pre-order now
+                </span>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

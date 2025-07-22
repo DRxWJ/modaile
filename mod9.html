@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Page Title</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <link
+        rel="stylesheet"
+        href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
+    />
+    <script src="https://kit.fontawesome.com/60ae45a088.js" crossorigin="anonymous" defer></script>
+    <style>
+        @font-face {
+            font-family: "SamsungOneb";
+            src: url("./font/SamsungSharpSans-Bold.ttf");
+        }
+        @font-face {
+            font-family: "SamsungOne";
+            src: url("./font/SamsungOne-400.ttf");
+        }
+        .dtdc{
+            width: 988px;
+            font-family: "SamsungOne";
+            border-top: 1px solid #ddd;
+        }
+        .dtdc .bt{
+            display: flex;
+            align-items: center;
+            width: 940px;
+            font-size: 28px;
+            justify-content: space-between;
+            cursor: pointer;
+        }
+        .dtdc p{
+            width: 940px;
+            margin-bottom: 50px;
+            opacity: 0;
+            max-height: 0;
+            margin: 0;
+            padding-bottom: 60px;
+            overflow: hidden;
+        }
+        .dets-titre-description{
+            width: 988px;
+            margin: auto;
+            border-bottom: 1px solid #ddd;
+        }
+        .dets-titre-description h1{
+            font-family: "SamsungOneb";
+            font-size: 48px;
+            text-align: center;
+        }
+        @keyframes show {
+            0%{
+                max-height: 0px;
+                opacity: 0;
+                padding-bottom: 0px;
+            }
+            100%{
+                max-height: 1080px;
+                opacity: 1;
+                padding-bottom: 60px;
+            }
+        }
+        @keyframes hide {
+            0%{
+                max-height: 1080px;
+                opacity: 1;
+                padding-bottom: 60px;
+            }
+            50%{
+                max-height: 0px;
+                padding-bottom: 0px;
+            }
+            100%{
+                max-height: 0px;
+                opacity: 0;
+                padding-bottom: 0px;
+            }
+        }
+        .showdtdc{
+            animation: 0.5s ease-out show forwards;
+        }
+        .hidedtdc{
+            animation: 0.5s ease-out hide forwards;
+        }
+        .bt i {
+            transition: transform 0.3s ease;
+        }
+
+    </style>
+</head>
+<body>
+    <div class="dets-titre-description">
+        <h1>Titre</h1>
+        <div class="dtdc">
+        <!---Notez bien tu doit changer le paramétre de du fonction change et l'id de p et i pour chaque nouveau elément ajouter dans dtdc!!--->
+            <div class="bt" onclick="change(1)"><h2>Sous-titre</h2><i id="i1" class="fas fa-chevron-up"></i></div>
+            <p id="dtdc-p1" class="hidedtdc">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Saepe atque repellendus quisquam ad explicabo modi, voluptas, officia fuga temporibus asperiores mollitia aliquid beatae consectetur, impedit molestiae distinctio. At, ipsam adipisci!</p>
+        </div>
+        <div class="dtdc">
+        <!---Notez bien tu doit changer le paramétre de du fonction change et l'id de p et i pour chaque nouveau elément ajouter dans dtdc!!--->
+            <div class="bt" onclick="change(2)"><h2>Sous-titre</h2><i id="i2" class="fas fa-chevron-up"></i></div>
+            <p id="dtdc-p2" class="hidedtdc">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Saepe atque repellendus quisquam ad explicabo modi, voluptas, officia fuga temporibus asperiores mollitia aliquid beatae consectetur, impedit molestiae distinctio. At, ipsam adipisci!</p>
+        </div>
+        <div class="dtdc">
+        <!---Notez bien tu doit changer le paramétre de du fonction change et l'id de p et i pour chaque nouveau elément ajouter dans dtdc!!--->
+            <div class="bt" onclick="change(3)"><h2>Sous-titre</h2><i id="i3" class="fas fa-chevron-up"></i></div>
+            <p id="dtdc-p3" class="hidedtdc">Lorem ipsum dolor lo sit amet, consectetur adipisicing elit. Saepe atque repellendus quisquam ad explicabo modi, voluptas, officia fuga temporibus asperiores mollitia aliquid beatae consectetur, impedit molestiae distinctio. At, ipsam adipisci!</p>
+        </div>
+        
+    </div>
+    <script>
+        let len=document.querySelectorAll(".bt").length
+        function change(x) {
+            if (document.getElementById("dtdc-p"+String(x)).classList.contains("hidedtdc")) {
+                document.getElementById("dtdc-p"+String(x)).classList.remove("hidedtdc")
+                document.getElementById("dtdc-p"+String(x)).classList.add("showdtdc")
+                document.getElementById("i"+x).style.transform = "rotate(180deg)";
+            }
+            else{
+                document.getElementById("dtdc-p"+String(x)).classList.add("hidedtdc")
+                document.getElementById("dtdc-p"+String(x)).classList.remove("showdtdc")
+                document.getElementById("i"+x).style.transform = "rotate(0deg)";
+            }
+        }
+        
+    </script>
+</body>
+</html>

@@ -1,0 +1,360 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Page Title</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <link rel='stylesheet' type='text/css' media='screen' href='main.css'>
+    <link
+        rel="stylesheet"    
+        href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" 
+    />
+    <script src="https://kit.fontawesome.com/60ae45a088.js" crossorigin="anonymous" defer></script>
+    <style>
+        :root{
+            --titre-color: black;
+            --sous-titre-color: #666;
+            --paragraph-color: #666;
+            --titre-size: 38px;
+            --sous-titre-size: 16px;
+            --paragraph-size: 14px;
+            --color-1: black;
+            --color-2: black;
+            --color-3: black;
+            --paragraph-font:"SamsungOne";
+            --titre-font:"SamsungOneb";
+            --sous-titre-font:"SamsungOneb";
+        }
+        @font-face {
+            font-family: 'SamsungOneb';
+            src: url('font/SamsungSharpSans-Bold.ttf') format('truetype');
+        }
+        @font-face {
+            font-family: 'SamsungOne';
+            src: url('font/SamsungOne-400.ttf') format('truetype');
+        }
+        .swiper {
+            width: 114px;
+            height: 546px;
+            margin: 0;
+        }
+        .swiper-slide img {
+            width: 114px;
+            height: 114px;
+            object-fit: cover;
+        }
+        .swiper-slide {
+            cursor: pointer;
+        }
+        #sids{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            width: 118px;
+            font-size: 22px;
+        }
+        #up,#down{
+            cursor: pointer;
+        }
+        #img-resu{
+            width: 733px;
+            height: 733px;
+            object-fit: cover;
+        }
+        .slide-image-desc{
+            display: flex;
+            gap: 50px;
+            margin: auto;
+            width: 1600px;
+        }
+        #bts{
+            width: 100%;
+            display: flex;
+            gap: 30px;
+            justify-content: space-evenly;
+        }
+        #sid-description p{
+            font-size: var(--paragraph-size);
+            font-family: var(--paragraph-font);
+            color: #666;
+        }
+        #sid-description #stock{
+            padding: 6px 14px;
+            background-color: black;
+            color: white;
+        }
+        #stock1{
+            margin-top: 20px;
+        }
+        #sid-description h1{
+            font-family: var(--titre-font);
+            font-weight: lighter;
+            font-size: var(--titre-size);
+        }
+        #cod{
+            font-family: var(--sous-titre-font);
+            font-weight: lighter;
+            color: #666;
+            font-size: var(--sous-titre-size);
+        }
+        #col1{
+            background-color: var(--color-1);
+            color: white;
+        }
+        #col2{
+            background-color: var(--color-2);
+            color: white;
+        }
+        #col3{
+            background-color: var(--color-3);
+            color: white;
+        }
+        #che span{
+            padding: 7px 8.5px;
+            border-radius: 100%;
+            background-color: black;
+            cursor: pointer;
+            width: 37px;
+        }
+        .slide-image-desc-disap{
+            visibility: hidden;
+        }
+        #spc{
+            color: var(--paragraph-color);
+            font-size: var(--paragraph-size);
+            font-family: var(--paragraph-font);
+        }
+        #col{
+            width: 240px;
+            display: flex;
+            justify-content: space-between;    
+        }
+    </style>
+</head>
+<body>
+    <div class="slide-image-desc">
+        <div id="sid-swiper">
+            <div class="swiper mySwiper">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide"><img src="./imageici.png" id="0" alt="" onclick="got(this.id)"></div>
+                    <div class="swiper-slide"><img src="./imageici.png" id="1" alt="" onclick="got(this.id)"></div>
+                    <div class="swiper-slide"><img src="./imageici.png" id="2" alt="" onclick="got(this.id)"></div>
+                    <div class="swiper-slide"><img src="./imageici.png" id="3" alt="" onclick="got(this.id)"></div>
+                    <div class="swiper-slide"><img src="./imageici.png" id="4" alt="" onclick="got(this.id)"></div>
+                    <div class="swiper-slide"><img src="./imageici.png" id="5" alt="" onclick="got(this.id)"></div>
+                    <div class="swiper-slide"><img src="./imageici.png" id="6" alt="" onclick="got(this.id)"></div>
+                </div>
+            </div>
+            <div id="bts">
+                <i class="fas fa-chevron-up" id="up"></i>
+                <i class="fas fa-chevron-down" id="down"></i>
+            </div>
+        </div>
+        <div id="sid-img">
+            <img src="" alt="" id="img-resu">
+        </div>
+        <div id="sid-description">
+            <h1>Nom télephone</h1>
+            <div><span id="cod">code télephone</span></div>
+            <div id="stock1"><span id="stock">stock</span></div>
+            <p>
+                description de téléphone Lorem ipsum dolor sit amet consectetur adipisicing elit. Nemo eveniet dolorem autem dolorum officia? Facere, provident. Ratione explicabo earum voluptas quis sequi hic dolorum asperiores! Atque praesentium doloribus ipsam quibusdam?
+                Itaque, asperiores! Harum distinctio exercitationem impedit ad necessitatibus esse nobis laboriosam doloremque in aperiam repellendus reprehenderit eos temporibus saepe iusto ab, vero perspiciatis doloribus, repellat tempore! Ab consequatur temporibus laborum.
+                Magnam, perspiciatis nostrum veritatis earum laboriosam incidunt optio consequuntur fugit. Ipsa saepe, alias iste possimus odio accusantium voluptas commodi inventore corrupti eos doloremque dolor? Quod tempore recusandae natus incidunt quidem?
+                Necessitatibus nam culpa placeat quod exercitationem itaque! Rerum iste sit nobis consequatur dolorem reprehenderit illo! Modi officia, facilis eius, excepturi aperiam suscipit perspiciatis voluptates dolorum illo consequatur, repellendus tempora aut.
+                Possimus voluptatum quidem asperiores? Magni debitis minima inventore sed quasi, autem libero doloremque iusto, nisi praesentium assumenda qui quibusdam id ea earum sapiente accusamus neque? Culpa autem odio a delectus?
+            </p>
+            <div id="col">
+                <span id="spc">Couleur :</span>
+                <div id="che">
+                    <span onclick="color(1)"><i id="col1" class="fas fa-check"></i></span>
+                    <span onclick="color(2)"><i id="col2" class="fas fa-check slide-image-desc-disap"></i></span>
+                    <span onclick="color(3)"><i id="col3" class="fas fa-check slide-image-desc-disap"></i></span>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script>
+        var swiper = new Swiper(".mySwiper", {
+        direction: "vertical",
+        slidesPerView: 4,
+        loop:true,
+        spaceBetween: 10,
+        mousewheel: true,
+        
+        });
+        document.getElementById("up").addEventListener("click",
+            ()=>{
+                swiper.slidePrev()
+            }
+        )
+        document.getElementById("down").addEventListener("click",
+            ()=>{
+                swiper.slideNext()
+            }
+        )
+        swiper.on('slideChange', () => {
+        const i = swiper.realIndex;
+        const slide = document.querySelectorAll('.swiper-slide:not(.swiper-slide-duplicate)')[i];
+        const img = slide.querySelector('img');
+        const src =img.src;
+        document.getElementById("img-resu").src=src
+        console.log(swiper.realIndex);
+        });
+        function got(x) {
+            swiper.slideToLoop(x)
+        }
+        function color(x) {
+            let col1=document.getElementById("col1")
+            let col2=document.getElementById("col2")
+            let col3=document.getElementById("col3")
+            const j = swiper.realIndex;
+            switch (x) {
+                case 1:
+                    col1.classList.remove("slide-image-desc-disap")
+                    col2.classList.add("slide-image-desc-disap")
+                    col3.classList.add("slide-image-desc-disap")
+                    for (let i = 0; i < 7; i++) {
+                        let sli=document.querySelectorAll('.swiper-slide:not(.swiper-slide-duplicate)')[i];
+                        switch (i) {
+                            case 0:
+                                /*changer l'image ici*/
+                                sli.querySelector("img").src="./imageici.png"
+                                break;
+                            case 1:
+                                /*changer l'image ici*/
+                                sli.querySelector("img").src="./imageici.png"
+                                break;
+                            case 2:
+                                /*changer l'image ici*/
+                                sli.querySelector("img").src="./imageici.png"
+                                break;
+                            case 3:
+                                /*changer l'image ici*/
+                                sli.querySelector("img").src="./imageici.png"
+                                break;
+                            case 4:
+                                /*changer l'image ici*/
+                                sli.querySelector("img").src="./imageici.png"
+                                break;
+                            case 5:
+                                /*changer l'image ici*/
+                                sli.querySelector("img").src="./imageici.png"
+                                break;
+                            case 6:
+                                /*changer l'image ici*/
+                                sli.querySelector("img").src="./imageici.png"
+                                break;
+                            default:
+                                break;
+                        }
+                        
+                    }
+                        let slid = document.querySelectorAll('.swiper-slide:not(.swiper-slide-duplicate)')[j];
+                        let im = slid.querySelector('img');
+                        let sr =im.src;
+                        document.getElementById("img-resu").src=sr
+                    break;
+                
+                case 2:
+                    col1.classList.add("slide-image-desc-disap")
+                    col2.classList.remove("slide-image-desc-disap")
+                    col3.classList.add("slide-image-desc-disap")
+                    for (let i = 0; i < 7; i++) {
+                        let sli=document.querySelectorAll('.swiper-slide:not(.swiper-slide-duplicate)')[i];
+                        switch (i) {
+                            case 0:
+                                /*changer l'image ici*/
+                                sli.querySelector("img").src="./imageici1.png"
+                                break;
+                            case 1:
+                                /*changer l'image ici*/
+                                sli.querySelector("img").src="./imageici1.png"
+                                break;
+                            case 2:
+                                /*changer l'image ici*/
+                                sli.querySelector("img").src="./imageici1.png"
+                                break;
+                            case 3:
+                                /*changer l'image ici*/
+                                sli.querySelector("img").src="./imageici1.png"
+                                break;
+                            case 4:
+                                /*changer l'image ici*/
+                                sli.querySelector("img").src="./imageici1.png"
+                                break;
+                            case 5:
+                                /*changer l'image ici*/
+                                sli.querySelector("img").src="./imageici1.png"
+                                break;
+                            case 6:
+                                /*changer l'image ici*/
+                                sli.querySelector("img").src="./imageici1.png"
+                                break;
+                            default:
+                                break;
+                        }
+                    }
+                        let slide = document.querySelectorAll('.swiper-slide:not(.swiper-slide-duplicate)')[j];
+                        let img = slide.querySelector('img');
+                        let src =img.src;
+                        document.getElementById("img-resu").src=src
+                    break;
+                case 3:
+                    col1.classList.add("slide-image-desc-disap")
+                    col2.classList.add("slide-image-desc-disap")
+                    col3.classList.remove("slide-image-desc-disap")
+                    for (let i = 0; i < 7; i++) {
+                        let sli=document.querySelectorAll('.swiper-slide:not(.swiper-slide-duplicate)')[i];
+                        switch (i) {
+                            case 0:
+                                /*changer l'image ici*/
+                                sli.querySelector("img").src="./imageici1.png"
+                                break;
+                            case 1:
+                                /*changer l'image ici*/
+                                sli.querySelector("img").src="./imageici1.png"
+                                break;
+                            case 2:
+                                /*changer l'image ici*/
+                                sli.querySelector("img").src="./imageici1.png"
+                                break;
+                            case 3:
+                                /*changer l'image ici*/
+                                sli.querySelector("img").src="./imageici1.png"
+                                break;
+                            case 4:
+                                /*changer l'image ici*/
+                                sli.querySelector("img").src="./imageici1.png"
+                                break;
+                            case 5:
+                                /*changer l'image ici*/
+                                sli.querySelector("img").src="./imageici1.png"
+                                break;
+                            case 6:
+                                /*changer l'image ici*/
+                                sli.querySelector("img").src="./imageici1.png"
+                                break;
+                            default:
+                                break;
+                        }
+                        let slide = document.querySelectorAll('.swiper-slide:not(.swiper-slide-duplicate)')[j];
+                        let img = slide.querySelector('img');
+                        let src =img.src;
+                        document.getElementById("img-resu").src=src
+                    }
+                    break;
+                
+                default:
+                    break;
+                
+            }
+            
+            
+            
+        }
+  </script>
+</body>
+</html>

@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Page Title</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <link
+        rel="stylesheet"
+        href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
+    />
+    <style>
+        @font-face {
+            font-family: "SamsungOneb";
+            src: url("./font/SamsungSharpSans-Bold.ttf");
+        }
+        @font-face {
+            font-family: "SamsungOne";
+            src: url("./font/SamsungOne-400.ttf");
+        }
+        .swiper-slide *{
+            width: 900px;
+        }
+        .slide-titre-description-img{
+            width: 1432px;
+            margin: auto;
+        }
+        .swiper-wrapper{
+            padding-left: 90px;
+        }
+        .swiper-button-next{
+            right: 355px;
+        }
+        
+        .swiper-button-next,.swiper-button-prev{
+            background-color: black;
+            width: 64px;
+            height: 64px;
+            border-radius: 100%;
+            color: white;
+            opacity: 0.7;
+        }
+        .slide-titre-description-img .pagination{
+            background-color: #3b3838;
+            width: 55px;
+            height: 26px;
+            border-radius: 20px;
+            display: flex;
+            justify-content: space-evenly;
+            align-items: center;
+            margin: auto;
+            margin-top: 60px;
+        }
+        .slide-titre-description-img .pagination .pdots{
+            border-radius: 100%;
+            background-color: white;
+            opacity: 0.5;
+            height: 8px;
+            width: 8px;
+            cursor: pointer;
+        }
+        .slide-titre-description-img .pagination .dotssh{
+            opacity: 1;
+        }
+        .slide-titre-description-img h1{
+            font-size: 38px;
+            font-family: "SamsungOneb";
+        }
+        .slide-titre-description-img p{
+            font-family: "SamsungOne";
+        }
+    </style>
+</head>
+<body>
+    <div class="slide-titre-description-img">
+        <div class="swiper">
+            <!-- Additional required wrapper -->
+            <div class="swiper-wrapper">
+                <!-- Slides -->
+                <div class="swiper-slide">
+                    <img src="./imageici.png" alt="">
+                    <h1>Titre</h1>
+                    <p>
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Sunt harum commodi veritatis quis ex vel quaerat enim molestiae consectetur eius expedita, maxime ab illum itaque reiciendis asperiores vero amet. Veniam?
+                    </p>
+                </div>
+                <div class="swiper-slide">
+                    <img src="./imageici.png" alt="">
+                    <h1>Titre</h1>
+                    <p>
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Sunt harum commodi veritatis quis ex vel quaerat enim molestiae consectetur eius expedita, maxime ab illum itaque reiciendis asperiores vero amet. Veniam?
+                    </p>
+                </div>
+                <div class="swiper-slide ghost">
+                </div>
+            </div>
+            <!-- If we need navigation buttons -->
+            <div class="swiper-button-prev" style="visibility: hidden;"></div>
+            <div class="swiper-button-next"></div>
+        </div>
+        <div class="pagination">
+            <span id="dot0" class="pdots dotssh" onclick="pagi(0)"></span>
+            <span id="dot1" class="pdots" onclick="pagi(1)"></span>
+        </div>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script>
+        const swiper=new Swiper(".swiper",{
+            slidesPerView:1.44,
+            spaceBetween: 20,
+            loop: false,
+            centeredSlides: false,
+            watchOverflow: true,
+            navigation: {
+                nextEl: '.swiper-button-next',
+                prevEl: '.swiper-button-prev',
+            },
+        })
+        function pagi(x) {
+            swiper.slideTo(x)
+        }
+        swiper.on("slideChange",()=>{
+            if (swiper.activeIndex==0) {
+                document.querySelector(".swiper-button-prev").style.visibility="hidden"
+                document.querySelector(".swiper-button-next").style.visibility="visible"
+                swiper.allowSlideNext= true
+                document.getElementById("dot0").classList.add("dotssh")
+                document.getElementById("dot1").classList.remove("dotssh")
+            }
+            else{
+                document.querySelector(".swiper-button-next").style.visibility="hidden"
+                document.querySelector(".swiper-button-prev").style.visibility="visible"
+                swiper.allowSlideNext= false
+                document.getElementById("dot0").classList.remove("dotssh")
+                document.getElementById("dot1").classList.add("dotssh")
+            }
+        })
+    </script>
+</body>
+</html>

@@ -1,0 +1,219 @@
+            
+<html>
+    <head rel="icon" href="./image.webp">
+        <meta charset='utf-8'>
+        <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+        <title>Samsung</title>
+        <link rel="shortcut icon" type="x-icon" href="./image.webp">
+        <meta name='viewport' content='width=device-width, initial-scale=1'>
+        <link rel='stylesheet' type='text/css' media='screen' href='main.css'>
+        <script src="https://kit.fontawesome.com/60ae45a088.js" crossorigin="anonymous" defer></script>
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+        <script async src="https://unpkg.com/es-module-shims@1.6.3/dist/es-module-shims.js"></script>
+        <script type="importmap">
+            {
+                "imports": {
+                "three": "https://unpkg.com/three@v0.163.0/build/three.module.js",
+                "three/addons/": "https://unpkg.com/three@v0.163.0/examples/jsm/"
+                }
+            }
+        </script>
+        <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.2/dist/gsap.min.js"></script>
+        <style>
+            @font-face {
+                font-family: "SamsungOneb";
+                src: url("./font/SamsungSharpSans-Bold.ttf");
+            }
+            @font-face {
+                font-family: "SamsungOne";
+                src: url("./font/SamsungOne-400.ttf");
+            }
+            #cont3d{
+                width: 988px;
+                margin: auto;
+            }
+            #progress-container{
+                text-align: center;
+            }
+            #colorfts{
+                display: flex;
+                width: 988px;
+                margin: auto;
+                justify-content: center;
+                align-items: center;
+                gap: 30px;
+                margin-bottom: 90px;
+                margin-top: 90px;
+                position: relative;
+            }
+            #clrs{
+                display: flex;
+                align-items: center;
+                width: 186px;
+                justify-content: space-between;
+                background-color: #1c1c1c;
+                padding: 14px 19px;
+                border-radius: 40px;
+                z-index: 1100;
+            }
+            #cros1{
+                cursor: pointer;
+            }
+            #clrs button{
+                width: 28px;
+                height: 28px;
+                border-radius: 100%;
+                border: 0;
+            }
+            #clrs button:hover{
+                cursor: pointer;
+            }
+            #clrs #cl1{
+                background-color: #5B798E;
+            }
+            #cl2{
+                background-color: #4a4a4d;
+            }
+            #cl3{
+                background-color: #b3ab9e;
+            }
+            #cl4{
+                background-color: #d9d9d6;
+            }
+            #clrs .forcl{
+                border: #0e9ff9 2px solid;
+            }
+            #mor{
+                width: 48px;
+                height: 48px;
+                border-radius: 100%;
+                background-color: #1c1c1c;
+                border: 0;
+                color: white;
+                font-size: 25px;
+                font-family: 'samsungOneb';
+                display: flex;
+                align-self: center;
+                justify-content: center;
+                letter-spacing: 3px;
+                position: relative;
+                z-index: 1100;
+            }
+            #partop{
+                display: flex;
+                justify-content: center;
+                gap: 190px;
+                margin-bottom: 15px;
+            }
+            #angle{
+                display: flex;
+                flex-wrap: wrap;
+                gap: 15px;
+            }
+            #angle button{
+                width: 94px;
+                height: 30px;
+                background-color: transparent;
+                border: white 1px solid;
+                border-radius: 20px;
+                color: white;
+            }
+            #cmor {
+                position: absolute;
+                bottom: 100px;
+                z-index: 1000;
+                width: 314px;
+            }
+
+            #moris {
+                padding: 30px 33px;
+                height: 108px;
+                background-color: #1c1c1ce8;
+                width: 314px;
+                border-radius: 20px;
+                display: block;
+            }
+
+            .disp {
+                display: none !important;
+            }
+            #d3mes{
+                position: absolute;
+                bottom: 10px;
+                right: 0px;
+                height: 100px;
+                display: flex;
+                width: 300px;
+                justify-content: center;
+                width: 100%;
+                font-size: 24px;
+                font-family: 'samsungOne';
+                font-weight: bold;
+            }
+            button:hover{
+                cursor: pointer;
+            }
+            #partop #ap,#cros1{
+                color: white;
+                font-family: "SamsungOne";
+            }
+        </style>
+    </head>
+    <body>
+        <div>
+            <div id="d3">
+                <div id="progress-container">
+                    <div id="progress">360°</div>
+                </div>
+                <div id="cont3d">
+                </div>
+                <span id="d3mes">Titanium Silverblue</span>
+                <div id="colorfts">
+                    <div id="clrs">
+                        <button id="cl1" onclick="col3d(this.id)" class="forcl">
+                        </button>
+                        <button id="cl2" onclick="col3d(this.id)">
+                        </button>
+                        <button id="cl3" onclick="col3d(this.id)">
+                        </button>
+                        <button id="cl4" onclick="col3d(this.id)">
+                        </button>
+                    </div>
+                <div id="cmor">
+                    <div id="moris" class="disp">
+                        <div id="partop">
+                            <span id="ap">Angle prédéfini</span>
+                            <span id="cros1"><i class="fas fa-x"></i></span>
+                        </div>
+                        <div id="angle">
+                            <button id="an1">Avant</button>
+                            <button id="an2">Gauche</button>
+                            <button id="an3">Haut</button>
+                            <button id="an4">Retour</button>
+                            <button id="an5">Droite</button>
+                            <button id="an6">Bas</button>
+                        </div>
+                    </div>
+                </div>
+                <button id="mor">...</button>
+            </div>
+        </div>
+        </div>
+        <script src='main.js' type="module"></script>
+        <script>
+           function togmor() {
+               document.getElementById("moris").classList.toggle('disp');
+               console.log(document.getElementById("moris").classList.contains('disp'));
+           
+           }
+           document.getElementById("mor").addEventListener('click', togmor)
+           window.addEventListener('click', (event) => {
+           if (!document.getElementById("moris").contains(event.target) && event.target != mor) {
+               if (!document.getElementById("moris").classList.contains('disp')) {
+               document.getElementById("moris").classList.add('disp');
+               }
+           }
+           });
+        </script>
+    </body>
+</html>

@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Page Title</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <link
+        rel="stylesheet"
+        href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
+    />
+    <script src="https://kit.fontawesome.com/60ae45a088.js" crossorigin="anonymous" defer></script>
+    <style>
+        @font-face {
+            font-family: "SamsungOneb";
+            src: url("./font/SamsungSharpSans-Bold.ttf");
+        }
+        @font-face {
+            font-family: "SamsungOne";
+            src: url("./font/SamsungOne-400.ttf");
+        }
+        .slides-progress-image .swiper .swiper-slide img{
+            width: 312px;
+            height: 312px;
+            object-fit: cover;
+        }
+        .swiper-progress-bar {
+            width: 80%;
+            height: 2px;
+            background-color: #eee;
+            margin-top: 20px;
+            position: relative;
+            overflow: hidden;
+        }
+        .swiper-progress-fill {
+            width: 0%;
+            height: 100%;
+            background-color: #000;
+            transition: width 0.3s ease;
+        }
+        #contg{
+            display: flex;
+            margin: auto;
+            width: 988px;
+            justify-content: space-around;
+            align-items: center;
+        }
+        #arr{
+            width: 40px;
+            display: flex;
+            gap: 10px;
+            justify-content: space-between;
+        }
+        #arr span{
+            cursor: pointer;
+            padding: 12px 15px;
+            border-radius: 100%;
+            border: #ddd 2px solid;
+        }
+        #arr span:hover{
+            opacity: 0.6;
+        }
+        .slides-progress-image h1{
+            text-align: center;
+            font-size: 48px;
+            font-family: "SamsungOneb";
+        }
+        .swiper-slide h2,.swiper-slide h3{
+            font-family: "SamsungOne";
+        }
+    </style>
+</head>
+<body>
+    <div class="slides-progress-image">
+        <h1>Titre</h1>
+        <div class="swiper">
+            <!-- Additional required wrapper -->
+            <div class="swiper-wrapper">
+                <!-- Slides -->
+                <div class="swiper-slide">
+                    <img src="./imageici.png" alt="">
+                    <h2>Nom Produit</h2>
+                    <h3>Prix</h3>
+                </div>
+                <div class="swiper-slide">
+                    <img src="./imageici.png" alt="">
+                    <h2>Nom Produit</h2>
+                    <h3>Prix</h3>
+                </div>
+                <div class="swiper-slide">
+                    <img src="./imageici.png" alt="">
+                    <h2>Nom Produit</h2>
+                    <h3>Prix</h3>
+                </div>
+                <div class="swiper-slide">
+                    <img src="./imageici.png" alt="">
+                    <h2>Nom Produit</h2>
+                    <h3>Prix</h3>
+                </div>
+                <div class="swiper-slide">
+                    <img src="./imageici.png" alt="">
+                    <h2>Nom Produit</h2>
+                    <h3>Prix</h3>
+                </div>
+                <div class="swiper-slide">
+                    <img src="./imageici.png" alt="">
+                    <h2>Nom Produit</h2>
+                    <h3>Prix</h3>
+                </div>
+                <div class="swiper-slide">
+                    <img src="./imageici.png" alt="">
+                    <h2>Nom Produit</h2>
+                    <h3>Prix</h3>
+                </div>
+                <div class="swiper-slide">
+                    <img src="./imageici.png" alt="">
+                    <h2>Nom Produit</h2>
+                    <h3>Prix</h3>
+                </div>
+                <div class="swiper-slide">
+                    <img src="./imageici.png" alt="">
+                    <h2>Nom Produit</h2>
+                    <h3>Prix</h3>
+                </div>
+                <div class="swiper-slide">
+                    <img src="./imageici.png" alt="">
+                    <h2>Nom Produit</h2>
+                    <h3>Prix</h3>
+                </div>
+                <div class="swiper-slide">
+                    <img src="./imageici.png" alt="">
+                    <h2>Nom Produit</h2>
+                    <h3>Prix</h3>
+                </div>
+                <div class="swiper-slide">
+                    <img src="./imageici.png" alt="">
+                    <h2>Nom Produit</h2>
+                    <h3>Prix</h3>
+                </div>
+                <div class="swiper-slide">
+                    <img src="./imageici.png" alt="">
+                    <h2>Nom Produit</h2>
+                    <h3>Prix</h3>
+                </div>
+                <div class="swiper-slide">
+                    <img src="./imageici.png" alt="">
+                    <h2>Nom Produit</h2>
+                    <h3>Prix</h3>
+                </div>
+                <div class="swiper-slide">
+                    <img src="./imageici.png" alt="">
+                    <h2>Nom Produit</h2>
+                    <h3>Prix</h3>
+                </div>
+                <div class="swiper-slide">
+                    <img src="./imageici.png" alt="">
+                    <h2>Nom Produit</h2>
+                    <h3>Prix</h3>
+                </div>
+                <div class="swiper-slide start">
+                    <img src="./imageici.png" alt="">
+                    <h2>Nom Produit</h2>
+                    <h3>Prix</h3>
+                </div>
+            </div>
+            <div id="contg">
+                <div class="swiper-progress-bar">
+                    <div class="swiper-progress-fill"></div>
+                </div>
+                <div id="arr">
+                    <span id="prev"><i class="fas fa-arrow-left"></i></span>
+                    <span id="next"><i class="fas fa-arrow-right"></i></span>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script>
+        
+        const swiper=new Swiper(".swiper",{
+            slidesPerView:5,
+            spaceBetween: 40,
+            loop: false,
+            centeredSlides: true,
+            navigation: {
+                nextEl: '.swiper-button-next',
+                prevEl: '.swiper-button-prev',
+            },
+            on: {
+            slideChange: function () {
+                const totalSlides = this.slides.length;
+                const progress = ((this.activeIndex + 1) / totalSlides) * 100;
+                document.querySelector('.swiper-progress-fill').style.width = `${progress}%`;
+                if (swiper.activeIndex==0) {
+                    document.getElementById("prev").style.opacity="0.6"
+                    document.getElementById("prev").style.cursor="default"
+                }
+                else{
+                    document.getElementById("prev").style.opacity="1"
+                    document.getElementById("prev").style.cursor="pointer"
+                }
+                if (swiper.activeIndex==swiper.slides.length-1) {
+                    document.getElementById("next").style.opacity="0.6"
+                    document.getElementById("next").style.cursor="default"
+                }
+                else{
+                    document.getElementById("next").style.opacity="1"
+                    document.getElementById("next").style.cursor="pointer"
+                }
+            }
+            }
+        })
+        if (swiper.activeIndex==0) {
+            document.getElementById("prev").style.opacity="0.6"
+            document.getElementById("prev").style.cursor="default"
+        }
+        else{
+            document.getElementById("prev").style.opacity="1"
+        }
+        document.getElementById("prev").addEventListener("click",()=>{
+            if (swiper.activeIndex!=0) {
+                swiper.slidePrev()
+            }
+        })
+        document.getElementById("next").addEventListener("click",()=>{
+            
+            if (swiper.activeIndex!=swiper.slides.length-1) {
+                swiper.slideNext()
+            }
+        })
+    </script>
+</body>
+</html>
